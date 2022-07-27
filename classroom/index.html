@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="estilos/comun.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lista de tareas</h1>
+      <p>¿Qué <em>tengo</em> que hacer <strong>hoy</strong>?</p>
+      <select id="filter-list">
+        <option value="">Todas las tareas</option>
+        <option value="finished">Completadas</option>
+        <option value="opened">Abiertas</option>
+      </select>
+    </header>
+
+    <ul id="list"></ul>
+
+    <fieldset id="new_task" class="row">
+      <label class="row row-wide">
+        <input
+          class="row-wide"
+          type="text"
+          name="task"
+          placeholder="Seguir aprendiendo"
+        />
+      </label>
+      <button>Añadir tarea</button>
+    </fieldset>
+
+    <button id="delete-all">Borrar todas las tareas</button>
+    <button id="delete-finished">Borrar tareas completadas</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>

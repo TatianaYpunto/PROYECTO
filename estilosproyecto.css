@@ -1,0 +1,213 @@
+:root {
+  --primary-color: hsl(214, 84%, 56%);
+  --transition: color 0, 1s, background-color 0, 2s easy-in-out;
+  --skills-bar-length: 0%;
+}
+* {
+  margin: 10px;
+  padding: 2px;
+}
+
+.caja1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  gap: 20px;
+  width: 250px;
+  height: 300px;
+  float: left;
+  background-size: 100% 100%;
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  background-image: url(https://lawebcinera.es/wp-content/uploads/2022/07/rsz_rsz_1img_20200928_153725_1.jpg);
+}
+.caja2 {
+  display: flex-wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  max-height: auto;
+  align-items: center;
+  align-content: space-around;
+  gap: 10px;
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  float: right;
+}
+.caja3 {
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  display: inline-block;
+  height: 350px;
+  width: 97%;
+}
+
+.skills {
+  padding: 0, 3em 0;
+}
+
+.skills__tech {
+  margin: 5px;
+  font-size: 20px;
+}
+.skills__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0, 1em;
+}
+
+.skills__bar,
+.skills__bar::after {
+  position: relative;
+  width: 500px;
+  height: 8px;
+  background-color: #888;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.skills__bar::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: -500px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+  animation: skills-bar-fill 2s ease-in-out forwards;
+}
+
+.skills__bar--10::after {
+  --skills-bar-length: 10%;
+}
+.skills__bar--20::after {
+  --skills-bar-length: 20%;
+}
+.skills__bar--30::after {
+  --skills-bar-length: 30%;
+}
+.skills__bar--40::after {
+  --skills-bar-length: 40%;
+}
+.skills__bar--50::after {
+  --skills-bar-length: 50%;
+}
+.skills__bar--60::after {
+  --skills-bar-length: 60%;
+}
+.skills__bar--70::after {
+  --skills-bar-length: 70%;
+}
+.skills__bar--80::after {
+  --skills-bar-length: 80%;
+}
+.skills__bar--90::after {
+  --skills-bar-length: 90%;
+}
+
+@keyframes skills-bar-fill {
+  to {
+    transform: translateX(var(--skills-bar-length));
+  }
+}
+
+.caja4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: static;
+  box-sizing: border-box;
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  width: 350px;
+  height: auto;
+  float: left;
+}
+
+.caja5 {
+  display: inline-block;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: static;
+  box-sizing: border-box;
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  width: 350px;
+  height: auto;
+  float: right;
+}
+.caja6 {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 250px;
+  max-width: 100%;
+  align-items: center;
+  align-content: space-around;
+
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+}
+
+.caja7 {
+  box-shadow: rgba(114, 70, 70, 0.24) 0px 3px 8px;
+  display: inline-block;
+  height: 100px;
+  max-width: 100%;
+}
+
+.fa {
+  box-sizing: content-box;
+  display: flex;
+  color: blue;
+  padding: 20px;
+  font-size: 40px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  background-size: 100% 100%;
+}
+
+.buttons {
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a {
+  font-size: 30px;
+}
+
+.texto {
+  border-left: 6px solid #5ac0b8;
+  border-radius: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 5px;
+  font-size: 20px;
+}
+.article {
+  box-sizing: content-box;
+  border: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.boton {
+  border: 1px solid turquoise;
+  padding: 10px;
+  background-color: turquoise;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: "Helvetica", sans-serif; /*tipografía texto*/
+  border-radius: 30px; /*bordes redondos*/
+  text-align: center;
+}
